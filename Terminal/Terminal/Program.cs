@@ -17,5 +17,6 @@ void Init()
         .AddCommandObject(new CD_TerminalRequest())
         .AddCommandObject(new ClearInfo())
         .AddCommandObject(new Dir())
-        .AddCommandObject(new FileInformation());
+        .AddCommandObject(new FileInformation())
+        .AddCommandObject(new Helper());
 }
