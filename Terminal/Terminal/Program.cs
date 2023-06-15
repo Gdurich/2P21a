@@ -19,5 +19,7 @@ void Init()
         .AddCommandObject(new Dir())
         .AddCommandObject(new FileInformation())
         .AddCommandObject(new Helper())
-        .AddCommandObject(new PrintBin());
+        .AddCommandObject(new PrintBin())
+        .AddCommandObject(new Delete())
+        .AddCommandObject(new Printbin_TerminalRequest());
 }
