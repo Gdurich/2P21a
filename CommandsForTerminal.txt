@@ -1,0 +1,25 @@
++cd {|| .. || dirName || url + dirName}
++mkdir {url + dirName || dirName} 
++tree {url + dirName || dirName }
++move {url + name || name} {url + name}
++append {url + name || name} {-b || -c || -e} ----> editor open for text write
++copy {url + name || name} {url + name}
++rename {url + name || name} {url + newName || newName}
++zip {url + name || name} {url + name || name}
++extract {url + name || name} {url + name || name}
++mkfile {url + name || name}
++help {}
++delete {url + name || name}
++write {url + name || name} ----> editor open to write
++print {url + name || name}
++printbin {url + name || name}
++dir {url + name}
++clearfile {url + name || name}
++clear {}
++openweb {http://............}
++sisinfo {}
++ccleaner { url + name || name}
++fileinfo { url + name || name}
++fc { url + name || name} { url + name || name}
++users {}
++autorun {-d || -a || -s} { url + name.exe || name.exe || }
