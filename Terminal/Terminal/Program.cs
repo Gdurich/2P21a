@@ -18,5 +18,6 @@ void Init()
         .AddCommandObject(new ClearInfo())
         .AddCommandObject(new Dir())
         .AddCommandObject(new FileInformation())
-        .AddCommandObject(new Helper());
+        .AddCommandObject(new Helper())
+        .AddCommandObject(new PrintBin());
 }
