@@ -15,7 +15,6 @@ namespace Terminal.Models.TerminalRequests
         }
         public override void Execute(CommandHandler handler, string commandBody = "")
         {
-            commandBody = commandBody.Replace("\\\\", "\\");
             try
             {
                 switch (commandBody)

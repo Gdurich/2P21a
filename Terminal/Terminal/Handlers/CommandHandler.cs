@@ -30,6 +30,8 @@ namespace Terminal.Handlers
             {
                 string commandName = command.Split(' ').First();
                 string commandBody = command.Split(' ').Length > 1 ? command.Substring(command.IndexOf(" ")) : "";
+                commandBody = commandBody.Trim();
+                commandBody = commandBody.Replace("\\\\", "\\");
                 TerminalRequest? currentTerminalRequest = null;
                 foreach (TerminalRequest terminalRequest in terminalRequests)
                 {
@@ -45,7 +47,7 @@ namespace Terminal.Handlers
                 }
                 else
                 {
-                    currentTerminalRequest.Execute(this, commandBody.Trim());
+                    currentTerminalRequest.Execute(this, commandBody);
                 }
             }
             catch
