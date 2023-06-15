@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Terminal.Models.TerminalResponses;
+using Terminal.Models.TerminalRequests.Base;
+
+namespace Terminal.Models.TerminalRequests
+{
+    public class Extract_TerminalRequest : TerminalRequest
+    {
+        public override string CommandKeyword => "extract";
+
+        public override TerminalResponse Execute(string[] commandArgs)
+        {
+            if (commandArgs.Length < 3)
+            {
+                return new TerminalResponse(false, "Usage: extract <zip_file> <destination_directory>");
+            }
+
+            string zipFile = commandArgs[1];
+            string destinationDirectory = commandArgs[2];
+
+            try
+            {
+
+                System.IO.Compression.ZipFile.ExtractToDirectory(zipFile, destinationDirectory);
+
+                return new TerminalResponse(true, $"Zip file '{zipFile}' extracted successfully to '{destinationDirectory}'.");
+            }
+            catch (Exception ex)
+            {
+                return new TerminalResponse(false, $"Error extracting zip file: {ex.Message}");
+            }
+        }
+    }
+}
