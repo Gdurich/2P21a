@@ -15,5 +15,6 @@ void Init()
 {
     commandHandler
         .AddCommandObject(new CD_TerminalRequest())
-        .AddCommandObject(new ClearInfo());
+        .AddCommandObject(new ClearInfo())
+        .AddCommandObject(new Dir());
 }
