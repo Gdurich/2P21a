@@ -17,7 +17,9 @@ namespace Terminal.Models.TerminalRequests
         {
             try
             {
-
+                string fileName = Path.Combine(CommandHandler.CurrentDirectoryPath, commandBody);
+                File.Create(fileName);
+                Console.WriteLine($"File '{fileName}' created successfully.");
             }
             catch (Exception ex)
             {
