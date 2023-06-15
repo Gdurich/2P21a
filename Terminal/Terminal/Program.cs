@@ -15,4 +15,6 @@ void Init()
 {
     commandHandler
         .AddCommandObject(new CD_TerminalRequest());
+    commandHandler
+        .AddCommandObject(new MKFILE_TerminalRequest());
 }
