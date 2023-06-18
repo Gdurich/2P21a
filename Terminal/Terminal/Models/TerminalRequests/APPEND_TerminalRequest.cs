@@ -58,9 +58,6 @@ namespace Terminal.Models.TerminalRequests
 
         private void EditFile(string filePath, CommandHandler handler, EditPosition position)
         {
-            //Console.WriteLine("Enter file path:");
-            //string filePath = Console.ReadLine();
-
             try
             {
                 string fileContent = File.ReadAllText(filePath);
@@ -85,11 +82,6 @@ namespace Terminal.Models.TerminalRequests
                 }
                 File.WriteAllText(filePath, fileContent);
                 Console.WriteLine($"Content successfully edited in file '{filePath}' at {position}.");
-
-                //if (!string.IsNullOrEmpty(filePath))
-                //{
-                //    Process.Start(new ProcessStartInfo(filePath) { UseShellExecute = true });
-                //}
             }
             catch (Exception ex)
             {
